@@ -19,6 +19,18 @@ def computer_guess(x):
     high = x
     feedback = ''
     while feedback != 'c':
+        if low != high:
+            guess = random.randint(low, high)
+        else:
+            guess = low
         guess = random.randint(low,high)
         feedback = input(f'Is {guess} to high (H), low (L), or correct (C)?').lower()
-        if feedback = 'h'
+        if feedback == 'h':
+            high = guess - 1
+        elif feedback == 'l':
+            low = guess + 1
+            
+print(f'Congratulations, you might actually get a job. {guess}')
+            
+            
+            
